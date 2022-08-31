@@ -1,0 +1,28 @@
+class Solution {
+public:
+    bool isPowerOfTwo(int n) {
+        
+        if(n == 1)
+        {
+            return true;
+        }
+        
+        int ans = 1;
+        
+        for(int i=1; i<=30; i++)
+        {
+            if(ans == n)
+            {
+                return n;
+            }
+            
+            if(ans < INT_MAX/2)
+            {
+                ans = ans*2;
+            }
+        }
+        
+        return false;
+        
+    }
+};
